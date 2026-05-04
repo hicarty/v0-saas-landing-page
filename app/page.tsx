@@ -20,6 +20,9 @@ export default function Home() {
       </header>
 
       <section className="pt-32 pb-20 px-6 diagonal-stripes">
+        <video playsinline autoplay muted loop poster="public/images/Untitled design.gif" id="bgvid">
+          <source src="public/videos/Firefly A cluster of light blue lines glide softly across the screen diagonal, like shooting stars. .mp4" type="video/mp4">
+        </video>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-6">

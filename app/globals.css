@@ -92,6 +92,15 @@
 }
 
 @layer utilities {
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
   .diagonal-stripes {
     background-image: repeating-linear-gradient(
       -45deg,
