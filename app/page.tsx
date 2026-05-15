@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground text-center leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground text-primary-foreground text-center leading-tight tracking-tight mb-6 text-balance">
             Cloud to Embedded<br />
             <span className="text-muted-foreground">Smart Solutions</span>
           </h1>
@@ -71,13 +71,13 @@ export default function Home() {
           </form>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-card rounded-2xl p-4 shadow-sm border border-border">
+            <div className="bg-card rounded-2xl shadow-sm border border-border">
               <img src="/smart-home-thermostat-display-showing-temperature-.jpg" alt="Smart Thermostat" className="w-full h-48 object-cover rounded-xl" />
             </div>
-            <div className="bg-card rounded-2xl p-4 shadow-sm border border-border">
+            <div className="bg-card rounded-2xl shadow-sm border border-border">
               <img src="/modern-home-heating-control-panel-with-touchscreen.jpg" alt="Control Panel" className="w-full h-48 object-cover rounded-xl" />
             </div>
-            <div className="bg-card rounded-2xl p-4 shadow-sm border border-border">
+            <div className="bg-card rounded-2xl shadow-sm border border-border">
               <img src="/white-honeywell-smart-radiator-valve-device-with-d.jpg" alt="Smart Valve" className="w-full h-48 object-cover rounded-xl" />
             </div>
           </div>
