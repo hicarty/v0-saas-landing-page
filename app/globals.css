@@ -102,13 +102,13 @@
   }
   
   .diagonal-stripes {
-    background-image: url('public/images/Untitled design.gif');
+    background-image: url('/images/Untitled design.gif');
     background-size: cover;
     background-position: center;
   }
 
   .diagonal-stripes-strong {
-    background-image: url('public/images/Untitled design.gif');
+    background-image: url('/images/Untitled design.gif');
     background-size: cover;
     background-position: center;
   }

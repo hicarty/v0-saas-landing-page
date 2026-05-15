@@ -19,7 +19,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="pt-32 pb-20 py-24 px-6 bg-[url('public/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes">
+      <section className="pt-32 pb-20 py-24 px-6 bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes">
         <video playsinline autoplay muted loop poster="public/images/Untitled design.gif" id="bgvid">
           <source src="public/videos/Firefly A cluster of light blue lines glide softly across the screen diagonal, like shooting stars. .mp4" type="video/mp4" />
         </video>
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-24 px-6 bg-background bg-[url('public/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes-strong">
+      <section id="testimonials" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes-strong">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Trusted by Industry Leaders</h2>
@@ -253,7 +253,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-24 px-6 bg-background bg-[url('public/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes">
+      <section id="contact" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">Ready to Transform Your<br /><span className="text-muted-foreground">Infrastructure?</span></h2>
           <p className="text-lg text-muted-foreground mb-10">Join our waitlist to be first in line when we launch. Early adopters receive exclusive pricing and priority onboarding.</p>
