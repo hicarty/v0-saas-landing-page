@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground text-primary-foreground text-center leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground text-center leading-tight tracking-tight mb-6 text-balance">
             Cloud to Embedded<br />
             <span className="text-muted-foreground">Smart Solutions</span>
           </h1>
@@ -130,7 +130,7 @@ export default function Home() {
       <section id="testimonials" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes-strong">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Trusted by Industry Leaders</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">Trusted by Industry Leaders</h2>
             <p className="text-lg text-muted-foreground">Smart solutions powering property management and office automation</p>
           </div>
 
@@ -263,7 +263,7 @@ export default function Home() {
 
       <section id="contact" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">Ready to Transform Your<br /><span className="text-muted-foreground">Infrastructure?</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">Ready to Transform Your<br /><span className="text-muted-foreground">Infrastructure?</span></h2>
           <p className="text-lg text-muted-foreground mb-10">Join our waitlist to be first in line when we launch. Early adopters receive exclusive pricing and priority onboarding.</p>
           <form className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
             <input type="email" placeholder="Enter your email" className="w-full sm:flex-1 px-5 py-3.5 rounded-full border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent" />
