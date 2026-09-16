@@ -113,3 +113,48 @@
     background-position: center;
   }
 }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.founder-section { padding: 5rem 1.5rem; background: var(--background); }
+.founder-inner { max-width: 48rem; margin: 0 auto; }
+.founder-inner h2 { margin: 0.65rem 0 0.75rem; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.04em; }
+.founder-inner p:last-child { max-width: 38rem; color: var(--muted-foreground); font-size: 1.1rem; line-height: 1.75; }
+
+.assembly-section { overflow: hidden; padding: 6rem 1.5rem; background: var(--primary); color: var(--primary-foreground); }
+.assembly-intro, .assembly-layout { max-width: 72rem; margin: 0 auto; }
+.assembly-intro { text-align: center; }
+.assembly-intro .eyebrow, .assembly-detail .eyebrow { color: #75e6a2; }
+.assembly-intro h2 { margin: 0.7rem 0 1rem; font-size: clamp(2.25rem, 6vw, 4.75rem); letter-spacing: -0.055em; }
+.assembly-intro > p:last-child { max-width: 38rem; margin: auto; color: color-mix(in oklch, var(--primary-foreground) 72%, transparent); line-height: 1.7; }
+.assembly-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr); align-items: center; gap: 3rem; margin-top: 4rem; }
+.constellation { position: relative; min-height: 31rem; }
+.constellation-line { position: absolute; height: 1px; background: color-mix(in oklch, #75e6a2 45%, transparent); transform-origin: left center; }
+.line-one { width: 80%; left: 10%; top: 50%; transform: rotate(-19deg); }
+.line-two { width: 72%; left: 15%; top: 52%; transform: rotate(18deg); }
+.cube { position: absolute; width: 10rem; height: 7rem; border: 0; background: transparent; color: white; cursor: pointer; filter: drop-shadow(0 1rem 1rem color-mix(in oklch, black 18%, transparent)); transition: transform 180ms ease, filter 180ms ease; }
+.cube:hover, .cube:focus-visible, .cube.is-active { transform: translateY(-0.5rem) scale(1.04); filter: drop-shadow(0 1.5rem 1rem color-mix(in oklch, #75e6a2 24%, transparent)); outline: none; }
+.cube:focus-visible { outline: 2px solid #75e6a2; outline-offset: 0.5rem; }
+.cube-top, .cube-front, .cube-side { position: absolute; display: block; border: 1px solid color-mix(in oklch, white 26%, transparent); }
+.cube-top { inset: 0 2.5rem 3.5rem 2.5rem; background: linear-gradient(135deg, #637895, #344860); transform: skewX(-45deg); }
+.cube-front { inset: 3.5rem 2.5rem 0 0; background: linear-gradient(135deg, #31435b, #1d2939); transform: skewY(45deg); }
+.cube-side { inset: 3.5rem 0 0 7.5rem; background: linear-gradient(135deg, #26364b, #152232); transform: skewY(-45deg); }
+.cube-community .cube-top { background: linear-gradient(135deg, #a4f3bd, #39bd71); }
+.cube-community .cube-front { background: linear-gradient(135deg, #24a85c, #08733a); }
+.cube-community .cube-side { background: linear-gradient(135deg, #0e8b47, #045c31); }
+.cube-label { position: absolute; z-index: 1; top: 3.8rem; left: 1rem; right: 1rem; font-size: 0.85rem; font-weight: 700; line-height: 1.1; text-wrap: balance; }
+.cube-1 { left: 35%; top: 38%; }.cube-2 { left: 5%; top: 10%; }.cube-3 { right: 4%; top: 8%; }.cube-4 { left: 5%; bottom: 6%; }.cube-5 { right: 3%; bottom: 5%; }.cube-6 { left: 35%; top: 2%; }.cube-7 { left: 35%; bottom: 0; }
+.assembly-detail { padding: 2rem; border: 1px solid color-mix(in oklch, white 18%, transparent); border-radius: 1.25rem; background: color-mix(in oklch, white 8%, transparent); backdrop-filter: blur(0.5rem); }
+.assembly-detail h3 { margin: 0.6rem 0 0.75rem; font-size: 2rem; }
+.assembly-detail > p:not(.eyebrow):not(.assembly-hint) { color: color-mix(in oklch, white 76%, transparent); line-height: 1.7; }
+.assembly-hint { margin: 1.25rem 0; color: #75e6a2; font-size: 0.85rem; }
+.assembly-detail a { color: white; font-weight: 700; text-decoration: underline; text-underline-offset: 0.25rem; }
+@media (max-width: 800px) { .assembly-layout { grid-template-columns: 1fr; gap: 1rem; } .constellation { min-height: 27rem; transform: scale(0.88); transform-origin: top center; margin-bottom: -3rem; } }
+@media (prefers-reduced-motion: reduce) { .cube { transition: none; } }
+

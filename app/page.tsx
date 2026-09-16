@@ -1,3 +1,5 @@
+import ClusterEngineeringAssembly from "@/components/cluster-engineering-assembly"
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -8,7 +10,7 @@ export default function Home() {
             <span className="text-lg font-semibold text-foreground">Cluster Technology</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
+            <a href="#what-we-do" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
             <a href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Clients</a>
             <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
@@ -84,7 +86,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-24 px-6 bg-card">
+      <section id="founder" className="founder-section">
+        <div className="founder-inner">
+          <p className="eyebrow">About the founder</p>
+          <h2>Haven Carty</h2>
+          <p>Passionate about Ireland and the UK&apos;s waters, Haven works at the intersection of open-water swimming, surfing, and ecosystem sustainability.</p>
+        </div>
+      </section>
+
+      <ClusterEngineeringAssembly />
+
+      <section id="legacy-features" className="py-24 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Our Services</h2>
