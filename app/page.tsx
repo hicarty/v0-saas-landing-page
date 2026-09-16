@@ -26,7 +26,7 @@ export default function Home() {
           loop
           playsInline
           poster="/images/untitled-design.gif"
-          class="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/videos/Firefly A cluster of light blue lines glide softly across the screen diagonal, like shooting stars. .mp4" type="video/mp4" />
         </video>
@@ -84,45 +84,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-24 px-6 bg-card">
+      <section id="features" className="services-section py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Full-stack IoT development from cloud infrastructure to embedded firmware</p>
+          <div className="mb-16 max-w-2xl">
+            <p className="services-kicker">What we do</p>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Our Services</h2>
+            <p className="text-lg text-muted-foreground">Ideas, people and products moving in the same direction.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-background rounded-2xl p-8 border border-border">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Azure Cloud Development</h3>
-              <p className="text-muted-foreground leading-relaxed">Scalable cloud infrastructure using Microsoft Azure IoT Hub, Functions, and data analytics pipelines for real-time device management.</p>
-            </div>
-
-            <div className="bg-background rounded-2xl p-8 border border-border">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Embedded Firmware</h3>
-              <p className="text-muted-foreground leading-relaxed">Custom firmware development with Platform.io for ESP32, STM32, and Nordic chips. OTA updates and secure boot implementations.</p>
-            </div>
-
-            <div className="bg-background rounded-2xl p-8 border border-border">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" /></svg>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Signal Protocols</h3>
-              <p className="text-muted-foreground leading-relaxed">Implementation of MQTT, CoAP, and custom signal initiation protocols. Secure device-to-cloud communication with TLS encryption.</p>
-            </div>
-
-            <div className="bg-background rounded-2xl p-8 border border-border">
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">System Integration</h3>
-              <p className="text-muted-foreground leading-relaxed">End-to-end integration connecting smart meters, sensors, and actuators with building management and property systems.</p>
-            </div>
+          <div className="services-grid">
+            <article className="service-cube service-cube--experiences">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Experiences<br />&amp; PR</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
+            <article className="service-cube service-cube--product">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Product<br />Delivers</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
+            <article className="service-cube service-cube--learning">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Learning &amp;<br />Development</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
+            <article className="service-cube service-cube--business">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">New<br />Business</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
+            <article className="service-cube service-cube--research">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Research &amp;<br />Development</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
+            <article className="service-cube service-cube--consultancy">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Consultancy</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
+            <article className="service-cube service-cube--community">
+              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Community</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
+            </article>
           </div>
         </div>
       </section>
