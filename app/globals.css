@@ -244,7 +244,13 @@
 .cube-community .cube-front { background: linear-gradient(135deg, #24a85c, #08733a); }
 .cube-community .cube-side { background: linear-gradient(135deg, #0e8b47, #045c31); }
 .cube-label { position: absolute; z-index: 1; top: 3.8rem; left: 1rem; right: 1rem; font-size: 0.85rem; font-weight: 700; line-height: 1.1; text-wrap: balance; }
-.cube-1 { left: 35%; top: 38%; }.cube-2 { left: 5%; top: 10%; }.cube-3 { right: 4%; top: 8%; }.cube-4 { left: 5%; bottom: 6%; }.cube-5 { right: 3%; bottom: 5%; }.cube-6 { left: 35%; top: 2%; }.cube-7 { left: 35%; bottom: 0; }
+.cube-1 { left: 35%; top: 38%; } /* community: the central influence */
+.cube-2 { left: 6%; top: 4%; }
+.cube-3 { right: 5%; top: 4%; }
+.cube-4 { left: 2%; top: 39%; }
+.cube-5 { right: 1%; top: 39%; }
+.cube-6 { left: 16%; bottom: 1%; }
+.cube-7 { right: 15%; bottom: 1%; }
 .assembly-detail { padding: 2rem; border: 1px solid color-mix(in oklch, white 18%, transparent); border-radius: 1.25rem; background: color-mix(in oklch, white 8%, transparent); backdrop-filter: blur(0.5rem); }
 .assembly-detail h3 { margin: 0.6rem 0 0.75rem; font-size: 2rem; }
 .assembly-detail > p:not(.eyebrow):not(.assembly-hint) { color: color-mix(in oklch, white 76%, transparent); line-height: 1.7; }

@@ -32,10 +32,12 @@ export function ClusterEngineeringAssembly() {
               key={division.name}
               type="button"
               className={`cube cube-${index + 1}${division.central ? " cube-community" : ""}${active === index ? " is-active" : ""}`}
-              onClick={() => setActive(index)}
-              onDoubleClick={() => window.open(division.url, "_blank", "noopener,noreferrer")}
+              onClick={() => {
+                setActive(index)
+                window.open(division.url, "_blank", "noopener,noreferrer")
+              }}
               aria-pressed={active === index}
-              aria-label={`${division.name}. Double click to open ${division.url}`}
+              aria-label={`${division.name}. Click to open ${division.url}`}
             >
               <span className="cube-top" aria-hidden="true" />
               <span className="cube-front" aria-hidden="true" />
@@ -48,7 +50,7 @@ export function ClusterEngineeringAssembly() {
           <p className="eyebrow">Selected division</p>
           <h3>{selected.name}</h3>
           <p>{selected.description}</p>
-          <p className="assembly-hint">Click to explore. Double click to visit.</p>
+          <p className="assembly-hint">Click a cube to visit its division.</p>
           <a href={selected.url} target="_blank" rel="noopener noreferrer">Open {selected.name} <span aria-hidden="true">↗</span></a>
         </article>
       </div>

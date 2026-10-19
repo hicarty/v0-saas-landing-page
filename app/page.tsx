@@ -1,3 +1,5 @@
+import ClusterEngineeringAssembly from "@/components/cluster-engineering-assembly"
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -92,39 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="services-section py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 max-w-2xl">
-            <p className="services-kicker">What we do</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground">Ideas, people and products moving in the same direction.</p>
-          </div>
-
-          <div className="services-grid">
-            <article className="service-cube service-cube--experiences">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Experiences<br />&amp; PR</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--product">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Product<br />Delivers</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--learning">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Learning &amp;<br />Development</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--business">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">New<br />Business</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--research">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Research &amp;<br />Development</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--consultancy">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Consultancy</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--community">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Community</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <ClusterEngineeringAssembly />
 
       <section id="testimonials" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes-strong">
         <div className="max-w-7xl mx-auto">
