@@ -37,40 +37,42 @@ export default function Home() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-accent rounded-full"></span>
-              Now accepting early access signups
+              Assembly &amp; QA · Engineering Samples
             </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground text-center leading-tight tracking-tight mb-6 text-balance">
-            Cloud to Embedded<br />
-            <span className="text-muted-foreground">Smart Solutions</span>
+            Engineering Samples<br />
+            <span className="text-muted-foreground">for the Connected World</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-            Bridging Azure cloud infrastructure with Platform.io embedded systems. We deliver end-to-end IoT solutions for smart offices and property management.
+            Cluster Technology is one engineering agency, founded by Haven Carty. We assemble, test and quality-assure engineering samples for teams researching and designing connected devices.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Innovation First
+              Transparent £280/day
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Reliable Systems
+              Documented QA on every build
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Sustainable Tech
+              UK &amp; Ireland on-site
             </div>
           </div>
 
-          <form id="waitlist" className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-16">
-            <input type="email" placeholder="Enter your email" className="w-full sm:flex-1 px-5 py-3 rounded-full border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent" />
-            <button type="submit" className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
-              Join the Waitlist
-            </button>
-          </form>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-16">
+            <a href="#contact" className="w-full sm:w-auto text-center bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
+              Make an Enquiry
+            </a>
+            <a href="#pricing" className="w-full sm:w-auto text-center bg-card text-foreground border border-border px-8 py-3 rounded-full text-sm font-medium hover:bg-muted transition-colors whitespace-nowrap">
+              See Pricing
+            </a>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-card rounded-2xl shadow-sm border border-border">
@@ -90,6 +92,8 @@ export default function Home() {
         <div className="founder-inner">
           <p className="eyebrow">About the founder</p>
           <h2>Haven Carty</h2>
+          <p className="founder-role">Founder &amp; prototype engineer, Cluster Technology</p>
+          <p>Haven started Cluster Technology because connected hardware needs someone who works inside the problem, not around it. Haven joins your R&amp;D team, builds the sample, and proves it works before it goes in front of investors, field trials or certification.</p>
           <p>Passionate about Ireland and the UK&apos;s waters, Haven works at the intersection of open-water swimming, surfing, and ecosystem sustainability.</p>
         </div>
       </section>

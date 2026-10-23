@@ -163,13 +163,11 @@
 
   .service-cube__face--top {
     transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
-    transform-origin: top;
     background: var(--cube-top);
   }
 
   .service-cube__face--right {
     transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
-    transform-origin: right;
     background: var(--cube-right);
   }
 
@@ -218,9 +216,10 @@
 }
 
 .founder-section { padding: 5rem 1.5rem; background: var(--background); }
-.founder-inner { max-width: 48rem; margin: 0 auto; }
+.founder-inner { max-width: 64rem; margin: 0 auto; }
 .founder-inner h2 { margin: 0.65rem 0 0.75rem; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.04em; }
-.founder-inner p:last-child { max-width: 38rem; color: var(--muted-foreground); font-size: 1.1rem; line-height: 1.75; }
+.founder-inner > p:not(.eyebrow) { max-width: 38rem; margin-bottom: 1rem; color: var(--muted-foreground); font-size: 1.1rem; line-height: 1.75; }
+.founder-inner > .founder-role { color: var(--foreground); font-size: 1rem; font-weight: 600; }
 
 .assembly-section { overflow: hidden; padding: 6rem 1.5rem; background: var(--primary); color: var(--primary-foreground); }
 .assembly-intro, .assembly-layout { max-width: 72rem; margin: 0 auto; }
