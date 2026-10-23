@@ -229,11 +229,11 @@
 .assembly-intro h2 { margin: 0.7rem 0 1rem; font-size: clamp(2.25rem, 6vw, 4.75rem); letter-spacing: -0.055em; }
 .assembly-intro > p:last-child { max-width: 38rem; margin: auto; color: color-mix(in oklch, var(--primary-foreground) 72%, transparent); line-height: 1.7; }
 .assembly-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr); align-items: center; gap: 3rem; margin-top: 4rem; }
-.constellation { position: relative; min-height: 31rem; }
+.constellation { position: relative; min-height: 34rem; width: min(100%, 56rem); margin-inline: auto; }
 .constellation-line { position: absolute; height: 1px; background: color-mix(in oklch, #75e6a2 45%, transparent); transform-origin: left center; }
-.line-one { width: 80%; left: 10%; top: 50%; transform: rotate(-19deg); }
-.line-two { width: 72%; left: 15%; top: 52%; transform: rotate(18deg); }
-.cube { position: absolute; width: 10rem; height: 7rem; border: 0; background: transparent; color: white; cursor: pointer; filter: drop-shadow(0 1rem 1rem color-mix(in oklch, black 18%, transparent)); transition: transform 180ms ease, filter 180ms ease; }
+.line-one { width: 58%; left: 21%; top: 45%; transform: rotate(-27deg); }
+.line-two { width: 58%; left: 21%; top: 45%; transform: rotate(27deg); }
+.cube { position: absolute; width: clamp(8rem, 18vw, 10rem); height: 7rem; border: 0; background: transparent; color: white; cursor: pointer; filter: drop-shadow(0 1rem 1rem color-mix(in oklch, black 18%, transparent)); transition: transform 180ms ease, filter 180ms ease; }
 .cube:hover, .cube:focus-visible, .cube.is-active { transform: translateY(-0.5rem) scale(1.04); filter: drop-shadow(0 1.5rem 1rem color-mix(in oklch, #75e6a2 24%, transparent)); outline: none; }
 .cube:focus-visible { outline: 2px solid #75e6a2; outline-offset: 0.5rem; }
 .cube-top, .cube-front, .cube-side { position: absolute; display: block; border: 1px solid color-mix(in oklch, white 26%, transparent); }
@@ -244,13 +244,14 @@
 .cube-community .cube-front { background: linear-gradient(135deg, #24a85c, #08733a); }
 .cube-community .cube-side { background: linear-gradient(135deg, #0e8b47, #045c31); }
 .cube-label { position: absolute; z-index: 1; top: 3.8rem; left: 1rem; right: 1rem; font-size: 0.85rem; font-weight: 700; line-height: 1.1; text-wrap: balance; }
-.cube-1 { left: 35%; top: 38%; } /* community: the central influence */
-.cube-2 { left: 6%; top: 4%; }
-.cube-3 { right: 5%; top: 4%; }
-.cube-4 { left: 2%; top: 39%; }
-.cube-5 { right: 1%; top: 39%; }
-.cube-6 { left: 16%; bottom: 1%; }
-.cube-7 { right: 15%; bottom: 1%; }
+/* 2–3–2 hex: two upper satellites, community at the centre, two middle satellites, two lower satellites. */
+.cube-1 { left: calc(50% - 5rem); top: 38%; } /* community: the central influence */
+.cube-2 { left: 14%; top: 3%; }
+.cube-3 { right: 14%; top: 3%; }
+.cube-4 { left: 2%; top: 38%; }
+.cube-5 { right: 2%; top: 38%; }
+.cube-6 { left: 14%; bottom: 0; }
+.cube-7 { right: 14%; bottom: 0; }
 .assembly-detail { padding: 2rem; border: 1px solid color-mix(in oklch, white 18%, transparent); border-radius: 1.25rem; background: color-mix(in oklch, white 8%, transparent); backdrop-filter: blur(0.5rem); }
 .assembly-detail h3 { margin: 0.6rem 0 0.75rem; font-size: 2rem; }
 .assembly-detail > p:not(.eyebrow):not(.assembly-hint) { color: color-mix(in oklch, white 76%, transparent); line-height: 1.7; }
