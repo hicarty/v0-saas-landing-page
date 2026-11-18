@@ -1,3 +1,33 @@
+import { ClusterEngineeringAssembly } from "@/components/cluster-engineering-assembly"
+
+const steps = [
+  { tag: "Scoping", title: "Brief & scope", description: "You walk us through the build, the BOM and what done looks like. We scope the days and confirm before any work starts." },
+  { tag: "Build", title: "Assembly", description: "We assemble to your specification and flag component or design issues as they arise, not after the fact." },
+  { tag: "Verify", title: "Test & QA", description: "Functional testing, inspection and defect resolution. Pass, fail and the path to resolution are all documented." },
+  { tag: "Handover", title: "Report & sign-off", description: "The sample comes back with its BOM, QA report and build record, ready for the demo, field trial or certification." },
+]
+
+const convictions = [
+  { title: "Connected, by design", description: "Devices only matter once they work together. Every sample is tested as part of the system it will live in, not as a board on a bench." },
+  { title: "Collaboration for our ecosystem", description: "Haven works inside your team: your standups, your tools, your suppliers. What we learn on the build is shared, not held back." },
+  { title: "Water and sustainability", description: "Monitoring and conserving the UK and Ireland's waters is where Cluster is most at home, and where we prioritise our time." },
+]
+
+const testimonials = [
+  { quote: "Haven integrated into our engineering team within a day. The QA reports were cleaner than anything we'd produced internally, and the build turned around in half the time we'd budgeted.", initials: "SD", name: "Software Director", company: "Transpose Software" },
+  { quote: "The sensor prototype came back with a test report I could put in front of our investor. Every failure was documented. Every fix was explained.", initials: "HL", name: "Hardware Lead", company: "Environmental Monitoring Startup" },
+]
+
+const rates = [
+  { title: "Assembly", description: "PCB, harness and mechanical builds" },
+  { title: "QA & Testing", description: "Functional, inspection and failure analysis" },
+  { title: "Documentation", description: "Build records and test reports" },
+]
+
+function Check({ className = "w-5 h-5 text-accent" }: { className?: string }) {
+  return <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -8,13 +38,14 @@ export default function Home() {
             <span className="text-lg font-semibold text-foreground">Cluster Technology</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#what-we-do" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
-            <a href="#testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Clients</a>
+            <a href="#what-we-do" className="text-sm text-muted-foreground hover:text-foreground transition-colors">What We Do</a>
+            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Process</a>
+            <a href="#founder" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Founder</a>
             <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
           </div>
-          <a href="#waitlist" className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
-            Join Waitlist
+          <a href="#contact" className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
+            Make an Enquiry
           </a>
         </nav>
       </header>
@@ -35,50 +66,52 @@ export default function Home() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-accent rounded-full"></span>
-              Now accepting early access signups
+              Assembly &amp; QA · Engineering Samples
             </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground text-center leading-tight tracking-tight mb-6 text-balance">
-            Cloud to Embedded<br />
-            <span className="text-muted-foreground">Smart Solutions</span>
+            Engineering Samples<br />
+            <span className="text-muted-foreground">for the Connected World</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-8 leading-relaxed">
-            Bridging Azure cloud infrastructure with Platform.io embedded systems. We deliver end-to-end IoT solutions for smart offices and property management.
+            Cluster Technology is one engineering agency, founded by Haven Carty. We assemble, test and quality-assure engineering samples for teams researching and designing connected devices.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Innovation First
+              <Check />
+              Transparent £280/day
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Reliable Systems
+              <Check />
+              Documented QA on every build
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Sustainable Tech
+              <Check />
+              UK &amp; Ireland on-site
             </div>
           </div>
 
-          <form id="waitlist" className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-16">
-            <input type="email" placeholder="Enter your email" className="w-full sm:flex-1 px-5 py-3 rounded-full border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent" />
-            <button type="submit" className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
-              Join the Waitlist
-            </button>
-          </form>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-16">
+            <a href="#contact" className="w-full sm:w-auto text-center bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
+              Make an Enquiry
+            </a>
+            <a href="#pricing" className="w-full sm:w-auto text-center bg-card text-foreground border border-border px-8 py-3 rounded-full text-sm font-medium hover:bg-muted transition-colors whitespace-nowrap">
+              See Pricing
+            </a>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-card rounded-2xl shadow-sm border border-border">
-              <img src="/smart-home-thermostat-display-showing-temperature-.jpg" alt="Smart Thermostat" className="w-full h-48 object-cover rounded-xl" />
+              <img src="/smart-home-thermostat-display-showing-temperature-.jpg" alt="Connected thermostat sample" className="w-full h-48 object-cover rounded-xl" />
             </div>
             <div className="bg-card rounded-2xl shadow-sm border border-border">
-              <img src="/modern-home-heating-control-panel-with-touchscreen.jpg" alt="Control Panel" className="w-full h-48 object-cover rounded-xl" />
+              <img src="/modern-home-heating-control-panel-with-touchscreen.jpg" alt="Connected control panel sample" className="w-full h-48 object-cover rounded-xl" />
             </div>
             <div className="bg-card rounded-2xl shadow-sm border border-border">
-              <img src="/white-honeywell-smart-radiator-valve-device-with-d.jpg" alt="Smart Valve" className="w-full h-48 object-cover rounded-xl" />
+              <img src="/white-honeywell-smart-radiator-valve-device-with-d.jpg" alt="Connected radiator valve sample" className="w-full h-48 object-cover rounded-xl" />
             </div>
           </div>
         </div>
@@ -88,91 +121,64 @@ export default function Home() {
         <div className="founder-inner">
           <p className="eyebrow">About the founder</p>
           <h2>Haven Carty</h2>
+          <p className="founder-role">Founder &amp; prototype engineer, Cluster Technology</p>
+          <p>Haven started Cluster Technology because connected hardware needs someone who works inside the problem, not around it. Haven joins your R&amp;D team, builds the sample, and proves it works before it goes in front of investors, field trials or certification.</p>
           <p>Passionate about Ireland and the UK&apos;s waters, Haven works at the intersection of open-water swimming, surfing, and ecosystem sustainability.</p>
+          <div className="founder-convictions">
+            {convictions.map((conviction) => (
+              <div key={conviction.title} className="bg-card rounded-2xl p-6 border border-border">
+                <h3 className="font-semibold text-foreground mb-2">{conviction.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{conviction.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="features" className="services-section py-24 px-6">
+      <ClusterEngineeringAssembly />
+
+      <section id="process" className="py-24 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 max-w-2xl">
-            <p className="services-kicker">What we do</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground">Ideas, people and products moving in the same direction.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">From Brief to Signed-off Sample</h2>
+            <p className="text-lg text-muted-foreground">A four-step model built around your engineering cadence, not ours</p>
           </div>
 
-          <div className="services-grid">
-            <article className="service-cube service-cube--experiences">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Experiences<br />&amp; PR</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--product">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Product<br />Delivers</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--learning">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Learning &amp;<br />Development</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--business">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">New<br />Business</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--research">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Research &amp;<br />Development</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--consultancy">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Consultancy</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-            <article className="service-cube service-cube--community">
-              <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">Community</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-            </article>
-          </div>
+          <ol className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {steps.map((step, index) => (
+              <li key={step.title} className="bg-background rounded-2xl p-8 border border-border">
+                <div className="w-10 h-10 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-semibold mb-6">{index + 1}</div>
+                <p className="eyebrow mb-2">{step.tag}</p>
+                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
       <section id="testimonials" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes-strong">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">Trusted by Industry Leaders</h2>
-            <p className="text-lg text-muted-foreground">Smart solutions powering property management and office automation</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">Built With Teams Who Ship Real Hardware</h2>
+            <p className="text-lg text-muted-foreground">Engineering samples for connected products across the UK and Ireland</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
-              <div className="flex items-center gap-1 mb-6">
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-              </div>
-              <blockquote className="text-foreground text-lg mb-6 leading-relaxed">&ldquo;Cluster Technology transformed our property portfolio with their smart metering solution. Energy costs down 34% across 200+ residential units.&rdquo;</blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
-                  <span className="text-lg font-semibold text-muted-foreground">PM</span>
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">Patrick Morrison</div>
-                  <div className="text-sm text-muted-foreground">CTO, PROPEX Property Management</div>
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.initials} className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+                <blockquote className="text-foreground text-lg mb-6 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</blockquote>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
+                    <span className="text-lg font-semibold text-muted-foreground">{testimonial.initials}</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
-              <div className="flex items-center gap-1 mb-6">
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-              </div>
-              <blockquote className="text-foreground text-lg mb-6 leading-relaxed">&ldquo;The smart office integration was seamless. Occupancy sensors and climate control now work in perfect harmony. Our team loves the automated environment.&rdquo;</blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
-                  <span className="text-lg font-semibold text-muted-foreground">SK</span>
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">Sarah Kennedy</div>
-                  <div className="text-sm text-muted-foreground">Facilities Director, Smart Offices Dublin</div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -180,94 +186,44 @@ export default function Home() {
       <section id="pricing" className="py-24 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-lg text-muted-foreground">Choose the plan that fits your project scale</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">One Day Rate, Every Service</h2>
+            <p className="text-lg text-muted-foreground">£280 a day across all engineering sample work. Scoped upfront, no variable billing.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-background rounded-2xl p-8 border border-border">
-              <h3 className="text-lg font-semibold text-foreground mb-2">Starter</h3>
-              <p className="text-muted-foreground text-sm mb-6">For pilot projects and prototypes</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-foreground">$2,500</span>
-                <span className="text-muted-foreground">/month</span>
+            {rates.map((rate) => (
+              <div key={rate.title} className="bg-background rounded-2xl p-8 border border-border">
+                <h3 className="text-lg font-semibold text-foreground mb-2">{rate.title}</h3>
+                <p className="text-muted-foreground text-sm mb-6">{rate.description}</p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-foreground">£280</span>
+                  <span className="text-muted-foreground">/day</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0" />
+                    Scoped before work starts
+                  </li>
+                  <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0" />
+                    Daily progress on request
+                  </li>
+                </ul>
+                <a href="#contact" className="block w-full py-3 text-center rounded-full border border-border text-foreground font-medium hover:bg-muted transition-colors">Make an Enquiry</a>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Up to 100 devices
-                </li>
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Azure IoT Hub setup
-                </li>
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Basic firmware template
-                </li>
-              </ul>
-              <a href="#waitlist" className="block w-full py-3 text-center rounded-full border border-border text-foreground font-medium hover:bg-muted transition-colors">Get Started</a>
-            </div>
-
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-xs font-medium">Most Popular</div>
-              <h3 className="text-lg font-semibold mb-2">Professional</h3>
-              <p className="text-primary-foreground/70 text-sm mb-6">For growing deployments</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold">$7,500</span>
-                <span className="text-primary-foreground/70">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-sm text-primary-foreground/90">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Up to 1,000 devices
-                </li>
-                <li className="flex items-center gap-3 text-sm text-primary-foreground/90">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Custom firmware development
-                </li>
-                <li className="flex items-center gap-3 text-sm text-primary-foreground/90">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  OTA update infrastructure
-                </li>
-              </ul>
-              <a href="#waitlist" className="block w-full py-3 text-center rounded-full bg-primary-foreground text-primary font-medium hover:opacity-90 transition-opacity">Get Started</a>
-            </div>
-
-            <div className="bg-background rounded-2xl p-8 border border-border">
-              <h3 className="text-lg font-semibold text-foreground mb-2">Enterprise</h3>
-              <p className="text-muted-foreground text-sm mb-6">For large-scale operations</p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-foreground">Custom</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Unlimited devices
-                </li>
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Dedicated engineering team
-                </li>
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  Custom protocol development
-                </li>
-              </ul>
-              <a href="#contact" className="block w-full py-3 text-center rounded-full border border-border text-foreground font-medium hover:bg-muted transition-colors">Contact Sales</a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="contact" className="py-24 px-6 bg-background bg-[url('/images/Untitled design.gif')] bg-cover bg-center diagonal-stripes">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">Ready to Transform Your<br /><span className="text-muted-foreground">Infrastructure?</span></h2>
-          <p className="text-lg text-muted-foreground mb-10">Join our waitlist to be first in line when we launch. Early adopters receive exclusive pricing and priority onboarding.</p>
-          <form className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-            <input type="email" placeholder="Enter your email" className="w-full sm:flex-1 px-5 py-3.5 rounded-full border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent" />
-            <button type="submit" className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">Join the Waitlist</button>
-          </form>
+          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">Tell Us About<br /><span className="text-muted-foreground">Your Build</span></h2>
+          <p className="text-lg text-muted-foreground mb-10">Whether you have a BOM ready or just a sketch on paper, get in touch. We&apos;ll come back with a realistic scope and a clear day-rate breakdown before any work starts.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-8">
+            <a href="mailto:havencarty@proton.me?subject=Engineering%20sample%20enquiry" className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">Email havencarty@proton.me</a>
+          </div>
+          <p className="text-sm text-muted-foreground">UK &amp; Ireland · On-site available · £280/day</p>
         </div>
       </section>
 
@@ -279,22 +235,22 @@ export default function Home() {
                 <img src="/images/cluster-logo.png" alt="Cluster Technology" width={40} height={40} className="object-contain brightness-0 invert" />
                 <span className="text-lg font-semibold">Cluster Technology</span>
               </div>
-              <p className="text-primary-foreground/70 text-sm leading-relaxed">Bridging cloud and embedded systems for the smart building industry.</p>
+              <p className="text-primary-foreground/70 text-sm leading-relaxed">Engineering sample assembly and QA for the research and design of connected devices.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Azure Development</a></li>
-                <li><a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Firmware Engineering</a></li>
-                <li><a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Signal Protocols</a></li>
+                <li><a href="#services" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Sample Assembly</a></li>
+                <li><a href="#services" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">QA &amp; Testing</a></li>
+                <li><a href="#services" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Firmware Bring-up</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Us</a></li>
-                <li><a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Careers</a></li>
-                <li><a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</a></li>
+                <li><a href="#founder" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Founder</a></li>
+                <li><a href="#process" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Process</a></li>
+                <li><a href="#contact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
@@ -310,7 +266,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-primary-foreground/60">&copy; 2026 Cluster Technology. All rights reserved.</p>
+            <p className="text-sm text-primary-foreground/60">&copy; 2026 Haven Carty · Cluster Technology. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Privacy Policy</a>
               <a href="#" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Terms of Service</a>

@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Cluster Technology - Cloud to Embedded Smart Solutions",
-  description: "Bridging Azure cloud infrastructure with Platform.io embedded systems. End-to-end IoT solutions for smart offices and property management.",
+  title: "Cluster Technology - Engineering Samples for the Connected World",
+  description: "Cluster Technology, founded by Haven Carty, assembles and quality-assures engineering samples for teams researching and designing connected devices.",
     generator: 'v0.app'
 }
 
