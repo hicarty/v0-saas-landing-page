@@ -1,11 +1,4 @@
-const services = [
-  { modifier: "assembly", label: <>PCB &amp;<br />Assembly</>, title: "PCB & Electronics Assembly", description: "Through-hole and SMT assembly of prototype boards, wire harnesses and mechanical sub-assemblies. Single units to short batches, with BOM management and component sourcing." },
-  { modifier: "qa", label: <>QA &amp;<br />Testing</>, title: "Quality Assurance & Testing", description: "Functional testing against your spec, visual inspection to IPC-A-610, environmental stress screening, defect logging and root-cause failure analysis." },
-  { modifier: "firmware", label: <>Firmware<br />Bring-up</>, title: "Firmware Flashing & Bring-up", description: "First flash, hardware bring-up and first-boot validation of embedded boards, through to a connected unit talking to your cloud." },
-  { modifier: "dfm", label: <>DFM &amp;<br />Enclosures</>, title: "DFM & Enclosure Review", description: "Design-for-manufacture review of housings and connected hardware: tolerances, sealing, IP rating and assembly sequence for small-batch production." },
-  { modifier: "sensors", label: <>Sensor<br />Prototyping</>, title: "Sensor Prototyping", description: "Smart-building controls, water quality, flow and environmental monitoring devices, assembled and calibrated for the field rather than the lab." },
-  { modifier: "reports", label: <>Sample<br />Reports</>, title: "Sample Reports & Documentation", description: "Build records, test reports and handover packs for every batch, ready for investor review, certification or engineering sign-off." },
-]
+import { ClusterEngineeringAssembly } from "@/components/cluster-engineering-assembly"
 
 const steps = [
   { tag: "Scoping", title: "Brief & scope", description: "You walk us through the build, the BOM and what done looks like. We scope the days and confirm before any work starts." },
@@ -45,7 +38,7 @@ export default function Home() {
             <span className="text-lg font-semibold text-foreground">Cluster Technology</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
+            <a href="#what-we-do" className="text-sm text-muted-foreground hover:text-foreground transition-colors">What We Do</a>
             <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Process</a>
             <a href="#founder" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Founder</a>
             <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
@@ -142,27 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="services-section py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 max-w-2xl">
-            <p className="services-kicker">What we do</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4">Our Services</h2>
-            <p className="text-lg text-primary-foreground/70">Hands-on research and design support for connected devices, from first board to signed-off sample.</p>
-          </div>
-
-          <div className="services-grid services-grid--three">
-            {services.map((service) => (
-              <article key={service.modifier} className="service-item">
-                <div className={`service-cube service-cube--${service.modifier}`}>
-                  <div className="service-cube__stage"><div className="service-cube__body"><div className="service-cube__face service-cube__face--front">{service.label}</div><div className="service-cube__face service-cube__face--top" /><div className="service-cube__face service-cube__face--right" /></div></div>
-                </div>
-                <h3 className="text-lg font-semibold text-primary-foreground mt-8 mb-2">{service.title}</h3>
-                <p className="text-sm text-primary-foreground/70 leading-relaxed">{service.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ClusterEngineeringAssembly />
 
       <section id="process" className="py-24 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
